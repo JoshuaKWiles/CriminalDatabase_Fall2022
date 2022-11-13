@@ -16,3 +16,24 @@ body{
     height: 150px;
     min-height: 100px;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: sticky;
+}
+li {
+    float: center;
+    width: 100px;
+}
+li a:hover {
+    background-color: ghostwhite;
+}
+a {
+    display: block;
+    padding: 8px;
+    background-color: dimgrey;
+}
+#filler{
+    width: 100px;
+}
