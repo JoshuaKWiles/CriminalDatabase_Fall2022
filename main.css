@@ -1,18 +1,18 @@
 body{
-    background-color: #17252A;
+    background-color: grey;
 }
 #maincontent{
     align-self: center;
-    width: 100%;
+    display: grid;
 }
 .centercell{
-    width: 30%;
-    background-color: #3AAFA9;
+    min-width: 200px;  
+    background-color: slategray;
 }
 .bumper{
     width: 50px;
 }
 .maintablerow{
-    height: 101px;
+    height: 150px;
     min-height: 100px;
 }
