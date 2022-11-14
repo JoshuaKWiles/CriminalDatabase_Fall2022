@@ -30,8 +30,15 @@
                     <td id="searchbar">
                         <center>
                             <form action="/action_page.php">
-                                <center></center>
-                                <input type="text" placeholder="Search the database" name="search">
+                                 Select a database to search from:<select name="databasename" id="databasedropdown">
+                                <option value="" selected="selected">Choose One</option>
+                                <option value="criminal" selected="selected">Criminal Database</option>
+                                <option value="arrests" selected="selected">Arrests Database</option>
+                                <option value="cases" selected="selected">Cases Database</option>
+                                <option value="prosecutions" selected="selected">Prosecution Database</option>
+                                </select>
+                                <br><br>
+                                <input type="text" placeholder="Enter name or keyword" name="search">
                                 <button type="submit">Submit</button>
                             </form>
                         </center>
