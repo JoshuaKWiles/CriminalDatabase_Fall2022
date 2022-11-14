@@ -9,6 +9,11 @@ body{
     min-width: 200px;  
     background-color: darkgrey;
 }
+#note {
+    font-family: sans-serif;
+    font-size: 32px;
+    background-color: darkgrey;
+}
 .bumper{
     width: 50px;
 }
@@ -16,6 +21,13 @@ body{
     height: 150px;
     min-height: 100px;
 }
+
+.maintablerow a{
+    display:block;
+    text-decoration:none;
+    height: inherit;
+}
+
 #header ul {
     list-style-type: none;
     margin: 0;
@@ -40,6 +52,12 @@ a {
 
 #searchbar {
     min-width: 600px;  
+    background-color: darkgrey;
+}
+
+.maintablerow .databasechoice{
+    border: 1px solid black;
+    border-radius: 10px;
     background-color: darkgrey;
 }
 
