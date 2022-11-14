@@ -1,5 +1,5 @@
 body{
-    background-color: grey;
+    background-color: #2B2B2B;
 }
 #maincontent{
     align-self: center;
@@ -7,7 +7,7 @@ body{
 }
 .centercell{
     min-width: 200px;  
-    background-color: slategray;
+    background-color: darkgrey;
 }
 .bumper{
     width: 50px;
@@ -16,17 +16,17 @@ body{
     height: 150px;
     min-height: 100px;
 }
-ul {
+#header ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     position: sticky;
 }
-li {
+#header li {
     float: center;
     width: 100px;
 }
-li a:hover {
+#header li a:hover {
     background-color: ghostwhite;
 }
 a {
@@ -36,4 +36,13 @@ a {
 }
 #filler{
     width: 100px;
+}
+
+.centercell input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
 }
