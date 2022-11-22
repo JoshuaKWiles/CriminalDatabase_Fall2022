@@ -2,6 +2,6 @@
 
 
 
-$conn = mysqli_connect("localhost", "root", "","user_info");
+$conn = mysqli_connect("localhost", "root", "","police_database");
 
 >
