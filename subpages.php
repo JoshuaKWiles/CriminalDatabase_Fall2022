@@ -28,19 +28,19 @@ $new = $html->find("#cases");
 $new = $html->find("#criminals");
 $new = $html->find("#process");
 if ($new == "#arrests") {
-    echo something
+    echo something;
 } 
-if else($new == "#cases") {
-    echo something2
+else if($new == "#cases") {
+    echo something2;
 } 
-if else($new == "#criminals") {
-    echo something3
+else if($new == "#criminals") {
+    echo something3;
 } 
-if else($new == "#process") {
-    echo something4
+else if($new == "#process") {
+    echo something4;
 }
 else {
-    echo something5
+    echo something5;
 }
 
->
+?>
