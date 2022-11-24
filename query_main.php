@@ -8,18 +8,42 @@ if ($conn->connect_error) {
         . $conn->connect_error);
 }
 
-$result = mysqli_query($conn, "SELECT * FROM ".$_GET['databasename']);
+$result = mysqli_query($conn, "SELECT * FROM " . $_GET['databasename']);
 
+$matches = array();
+while ($row = $result->fetch_array()) {
+    foreach ($row as $value) {
+        $matched = strpos("\x00" . strtolower($value), strtolower($_GET['search']));
+        if ($matched) {
+            $matches[count($matches)] = $row;
+            break;
+        }
+    }
+}
+
+if (count($matches) == 0) {
+    echo "No results found";
+}
+else {
+$cols = $conn -> query("SHOW COLUMNS from " . $_GET['databasename']);
 echo "<table>";
-while ($row = $result -> fetch_array()) {
-    echo "</tr>";
-    foreach ($row as $val) {
-        echo "<td>" . $val . "</td>";
+
+echo "<tr>";
+while ($row = $cols->fetch_array()) {
+    echo "<th>" . $row[0] . "</th>";
+}
+echo "</tr>";
+
+foreach ($matches as $row) {
+    echo "<tr>";
+    for ($x = 0; $x < count($row)/2; $x += 1) {
+        echo "<td>" . $row[$x] . "</td>";
     }
     echo "</tr>";
     // Free result set
   }
   echo "</table>";
+}
   mysqli_free_result($result);
 
   mysqli_close($conn);
